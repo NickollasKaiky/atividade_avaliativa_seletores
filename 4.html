@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <p id="num">0</p>
+    <button id="btnMais">Clique aqui</button>
+    <button id="btnZerar">Zerar</button>
+
+    <script>
+        const btnMais = document.querySelector('#btnMais')
+        const btnZerar = document.querySelector('#btnZerar')
+        const num = document.querySelector('#num')
+        let contador = 0
+
+        btnMais.addEventListener('click', () => {
+            contador++
+            num.textContent = contador
+        })
+
+        btnZerar.addEventListener('click', () => {
+            contador = 0
+            num.textContent = contador
+        })
+    </script>
+
+</body>
+</html>
