@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <h1 id="text">Palavras de Incentivo.</h1>
+
+    <script>
+        const texto = document.querySelector('#text')
+
+        const tamanho = Math.floor(Math.random() * (100 - 30 + 1)) + 30
+
+        text.style.fontSize = tamanho + "px";
+
+        if (tamanho < 65) {
+            text.textContent = 'Palavras de incentivo.'
+
+            text.style.color = 'red'
+        }
+        else{
+        text.textContent = 'Palavras de grande incentivo!'
+
+        text.style.color = 'blue'
+        }
+
+    </script>
+</body>
+</html>
