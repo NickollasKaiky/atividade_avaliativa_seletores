@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+</head>
+
+<body>
+    <img src="https://picsum.photos/id/237/600/400" alt="">
+
+    <script>
+        const img = document.querySelector('img')
+        const imagens = [
+            "https://picsum.photos/id/237/600/400",
+            "https://picsum.photos/id/238/600/400",
+            "https://picsum.photos/id/239/600/400",
+            "https://picsum.photos/id/240/600/400"
+        ]
+
+        let i = 0
+
+        function trocarImagem(){
+            do{
+                i++
+
+                if (i > imagens.length - 1) {
+                    i = 0
+                }
+            }
+            while (img.src === imagens[i])
+
+            img.src = imagens[i]
+        }
+
+        setInterval(trocarImagem, 5000);
+
+        
+    </script>
+</body>
+
+</html>
