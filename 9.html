@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+        *{
+            transition: all 0.3s;
+        }
+
+        .claro{
+            background-color: aliceblue;
+            color: black;
+        }
+
+        .escuro{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body class="claro">
+    <input type="text" placeholder="Digite seu sabor de sorvete...">
+    <p></p>
+    <button>Mudar para o tema escuro</button>
+    
+
+    <script>
+        const body = document.querySelector('body')
+        const campo = document.querySelector('input')
+        const text = document.querySelector('p')
+        const tema = document.querySelector('button')
+
+     
+        campo.addEventListener('input', () => {
+
+            if (campo.value.length > 3) {
+            if (campo.value.trim() == 'chocolate') {
+                text.textContent = 'Eu amo sorve de chocolate <3'
+            }
+            else if(campo.value.trim() == 'flocos'){
+                text.textContent = 'Aaahh, mas chocolate é o meu favorito...'
+            }
+            else{
+                text.textContent = 'Aaaah, eu esperava um sabor de sorvete...'
+            }
+        }
+        else{
+            text.textContent = '';
+        }
+
+        })
+
+        tema.addEventListener('click', () => {
+            if (body.classList.value === 'claro') {
+                body.classList.remove('claro');
+                body.classList.add('escuro')
+                tema.textContent = 'mudar para o tema escuro'
+                return;
+            }
+            else{
+                body.classList.remove('escuro');
+                body.classList.add('claro')
+                tema.textContent = 'mudar para o tema claro'
+            }
+        })
+    </script>
+</body>
+</html>
