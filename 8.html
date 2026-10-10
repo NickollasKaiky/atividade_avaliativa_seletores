@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    <input type="text" placeholder="Digite seu sabor de sorvete...">
+    <p></p>
+
+    <script>
+        const campo = document.querySelector('input')
+        const text = document.querySelector('p')
+
+     
+        campo.addEventListener('input', () => {
+
+            if (campo.value.length > 3) {
+            if (campo.value.trim() == 'chocolate') {
+                text.textContent = 'Eu amo sorve de chocolate <3'
+            }
+            else if(campo.value.trim() == 'flocos'){
+                text.textContent = 'Aaahh, mas chocolate é o meu favorito...'
+            }
+            else{
+                text.textContent = 'Aaaah, eu esperava um sabor de sorvete...'
+            }
+        }
+        else{
+            text.textContent = '';
+        }
+
+        })
+    </script>
+</body>
+</html>
