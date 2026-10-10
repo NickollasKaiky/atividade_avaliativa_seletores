@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB9WFT0oSE3T_6X0sx7sMUao0oJ4iAK2spHq_RiRF1RQ&s=10" alt="Personagem de Gravity Falls" width="250px">
+    <p></p>
+    <button>
+        Trocar Personagem
+    </button>
+
+    <script>
+        const img = document.querySelector('img')
+        const text = document.querySelector('p')
+        const btn = document.querySelector('button')
+        let imgs = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB9WFT0oSE3T_6X0sx7sMUao0oJ4iAK2spHq_RiRF1RQ&s=10', 
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp90UMxA9_lr_MQJh4vMCVaUYMGQWoAsL_NpdrDSFvUg&s=10',
+        'https://static.wikia.nocookie.net/p__/images/9/9b/Old_Man_McGucket.png/revision/latest?cb=20210426044531&path-prefix=protagonist',
+        'https://static.wikia.nocookie.net/gravityfalls/images/8/8b/Gnomos_render.png/revision/latest?cb=20170126234026&path-prefix=es',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMqW5YDiodC5QtOILTiKCHl0ME3_2kxNKrZvaAvu50OA&s=10']
+
+        img.addEventListener('mouseenter', () => {
+            text.textContent = 'Tire a mão de mim'
+        })
+
+        img.addEventListener('mouseleave', () => {
+            text.textContent = 'Fique por ai'
+        })
+
+        img.addEventListener('click', () => {
+            text.textContent = 'AAAAiii'
+        })
+
+        img.addEventListener('mousemove', () => {
+            text.textContent = 'Pare de andar'
+        })
+
+        btn.addEventListener('click', () => {
+            let i
+            do{
+
+            i = Math.floor(Math.random() * imgs.length)
+
+            }while(img.src === i)
+
+            img.src = imgs[i]
+        })
+    </script>
+</body>
+</html>
